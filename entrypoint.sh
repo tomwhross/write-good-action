@@ -4,7 +4,7 @@
 result=$(find . -name "*.md" | xargs npx write-good | sed -e $'s/In .\//\\\n\\\nIn .\//g' | tail -n +3)
 
 if [ -z "$result" ]; then
-				exit 0
+	exit 0
 fi
 
 header=$'Here are some friendly prose warnings from [`write-good`](https://github.com/btford/write-good):\n'
