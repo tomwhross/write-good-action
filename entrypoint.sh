@@ -3,7 +3,7 @@
 # lint markdown files and capture output
 result=$(find . -name "*.md" | xargs npx write-good | sed -e $'s/In .\//\\\n\\\nIn .\//g' | tail -n +3)
 
-if [ -z "$var" ]; then
+if [ -z "$result" ]; then
 				exit 0
 fi
 
