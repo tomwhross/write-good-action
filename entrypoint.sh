@@ -4,6 +4,7 @@
 result=$(find . -name "*.md" | xargs npx write-good | sed -e $'s/In .\//\\\n\\\nIn .\//g' | tail -n +3)
 
 if [ -z "$result" ]; then
+	echo "No warnings from write-good"
 	exit 0
 fi
 
