@@ -1,0 +1,13 @@
+# action.yml
+name: 'Lint Markdown'
+description: 'Lint Markdown files using write-good'
+branding:
+  icon: 'check'  
+  color: 'green'
+outputs:
+  result: # id of output
+    description: 'Linter suggestions'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
