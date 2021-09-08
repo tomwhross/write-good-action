@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 # lint markdown files and capture output
-result=$(npx write-good **/*.md | sed -e $'s/In .\//\\\n\\\nIn .\//g' | tail -n +3)
+result=$(find . -name "*.md" -print0 | xargs -0 npx write-good | sed -e $'s/In .\//\\\n\\\nIn .\//g' | tail -n +3)
 
 if [ -z "$result" ]; then
 	echo "No warnings from write-good"
