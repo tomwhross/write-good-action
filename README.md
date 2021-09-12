@@ -2,6 +2,12 @@
 
 This action lints Markdown files using [`write-good`](https://github.com/btford/write-good) and prints the output to the log.
 
+## Inputs
+
+### `directory`
+
+Select a directory to search files to run `write-good` on. The default is ".", the current working directory.
+
 ## Outputs
 
 ### `result`

@@ -2,12 +2,16 @@
 name: 'Lint Markdown'
 description: 'Lint Markdown files using write-good'
 branding:
-  icon: 'check'  
+  icon: 'check'
   color: 'green'
+inputs:
+  directory: 
+    description: 'Name of Directory to scan with write-good [default is "."]'
+    required: false
+    default: '.'
 outputs:
   result: # id of output
     description: 'Linter suggestions'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-
