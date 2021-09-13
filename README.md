@@ -32,7 +32,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: write-good action step
       id: write-good
-      uses: tomwhross/write-good-action@v1.2
+      uses: tomwhross/write-good-action@v1.3
     # Use the output from the `write-good` step
     - name: Get the write-good output
       run: echo "${{ steps.write-good.outputs.result }}"
