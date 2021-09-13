@@ -6,7 +6,7 @@ This action lints Markdown files using [`write-good`](https://github.com/btford/
 
 ### `directory`
 
-Select a directory containing files to evaluate with `write-good`. The default is ".", the current working directory.
+*(Optional)* Select a directory containing files to examine with `write-good`. The default is ".", the current working directory.
 
 ## Outputs
 
@@ -38,7 +38,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: write-good action step
       id: write-good
-      uses: tomwhross/write-good-action@v1.3
+      uses: tomwhross/write-good-action@v1.4
+      # with:
+      #   directory: "manuscript" # Optional, uncomment to specify a directory to scan
     # Use the output from the `write-good` step
     - name: Get the write-good output
       run: echo "${{ steps.write-good.outputs.result }}"
