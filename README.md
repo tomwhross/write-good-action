@@ -2,6 +2,12 @@
 
 This action lints Markdown files using [`write-good`](https://github.com/btford/write-good) and prints the output to the log.
 
+## Inputs
+
+### `directory`
+
+Select a directory containing files to evaluate with `write-good`. The default is ".", the current working directory.
+
 ## Outputs
 
 ### `result`
@@ -14,7 +20,7 @@ Use with [`add-pr-comment`](https://github.com/marketplace/actions/add-pr-commen
 
 ## Example usage
 
-```
+```yaml
 on:
   push:
     branches:
@@ -46,4 +52,3 @@ jobs:
         repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
         allow-repeats: false # This is the default
 ```
-
