@@ -10,6 +10,9 @@ fi
 
 header=$'Here are some friendly prose warnings from [`write-good`](https://github.com/btford/write-good):\n'
 
+# prevent command execution by substituting ` for '
+result=$(echo "$result" | sed "s/\`/'/g")
+
 result=$header$'```\n'$result$'\n```'
 
 # add support for multiline output
