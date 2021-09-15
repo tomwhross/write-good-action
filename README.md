@@ -38,7 +38,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: write-good action step
       id: write-good
-      uses: tomwhross/write-good-action@v1.4
+      uses: tomwhross/write-good-action@v1.5
       # with:
       #   directory: "manuscript" # Optional, uncomment to specify a directory to scan
     # Use the output from the `write-good` step
