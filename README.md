@@ -33,6 +33,8 @@ name: 'Trigger: Push action'
 jobs:
   write_good_job:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     name: A job to lint Markdown files
     steps:
     - uses: actions/checkout@v2
